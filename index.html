@@ -5,8 +5,13 @@
 </head>
 <body>
 <p>Temporary until I actually get around to learning how to make a proper website lol
-<p>Java 8: -XX:+UseG1GC</p>
+<p>Java 8: -XX:+UseG1GC
+  <br>- G1GC is apparently pretty bad on it's own, in which case those walls of arguments you don't know what they do might actually be better?
+  <br>  The issue then ends up being that those are optimised for that system, and not your, and it's unlikely you know how to tweak GC settings to fit your system...
+  <br>  <s>And even if you did, you'd probably be using a better GC/Java anyway</s>
+  <br>- I'm told some distributions of OpenJDK 8 are shipped with a backport of Shenandoah, if you're using one of those, refer to the Java 17 section</p>
 <p>Java 17: -XX:+UseShenandoahGC</p>
-<p>Jave 21+: -XX:+UseZGC -XX:+ZGenerational</p>
+<p>Java 21: -XX:+UseZGC -XX:+ZGenerational</p>
+<p>Java 25: Stable is not yet released so I've not tested stuff myself, will update once I do</p>
 </body>
 </html>
