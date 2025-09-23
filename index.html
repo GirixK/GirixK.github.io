@@ -1,17 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <p>Temporary until I actually get around to learning how to make a proper website lol
-<p>Java 8: -XX:+UseG1GC
-  <br>- G1GC is apparently pretty bad on it's own, in which case those walls of arguments you don't know what they do might actually be better?
-  <br>  The issue then ends up being that those are optimised for that system, and not your, and it's unlikely you know how to tweak GC settings to fit your system...
-  <br>  <s>And even if you did, you'd probably be using a better GC/Java anyway</s>
-  <br>- I'm told some distributions of OpenJDK 8 are shipped with a backport of Shenandoah, if you're using one of those, refer to the Java 17 section</p>
+<p>Java 8: -XX:+UseG1GC<br>
+  <span style="margin-left:24px">G1GC is apparently pretty bad on it's own, in which case those walls of arguments you don't know what they do might actually be better?</span><br>
+  <span style="margin-left:24px">The issue then ends up being that those are optimised for that system, and not your, and it's unlikely you know how to tweak GC settings to fit your system...<br>
+  <span style="margin-left:24px"><s>And even if you did, you'd probably be using a better GC/Java anyway</s><br>
+  <span style="margin-left:24px">I'm told some distributions of OpenJDK 8 are shipped with a backport of Shenandoah, if you're using one of those, refer to the Java 17 section</p>
 <p>Java 17: -XX:+UseShenandoahGC</p>
 <p>Java 21: -XX:+UseZGC -XX:+ZGenerational</p>
-<p>Java 25: Stable is not yet released so I've not tested stuff myself, will update once I do</p>
+<p>Java 25: I've yet to test these myself, I've just been telling my friends to try them and tell me if it's better or worse, but the theoretical good ones would be one of these two<br>
+  <span style="margin-left:24px">-XX:+UseShenandoahGC -XX:ShenandoahGCMode=generational -XX:+UseCompactObjectHeaders<br>
+  <span style="margin-left:24px">-XX:+UseZGC -XX:+UseCompactObjectHeaders<br>
+  <span style="margin-left:24px">Shenandoah might work better, but not all distributions support it, so ZGC is more consistent<br>
+</p>
 </body>
 </html>
