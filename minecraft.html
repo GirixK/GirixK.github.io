@@ -22,7 +22,6 @@
                     <button class="dropbtn">Useful Info</button>
                     <div class="dropdown-content">
                         <a href="minecraft.html">Minecraft</a>
-                        <a href="#">Link 2</a>
                     </div>
                 </div>
             </div>
@@ -43,16 +42,30 @@
                 <p>I haven't seen any benchmarks that really compare the following two GCs, theory states Shenandoah
                     might be better,<br>
                     but also I really recommend you try both of these setups out, and see which runs better for you</p>
-                <button type="button" class="copy" data-copy=".gc-26-1">
-                    <ion-icon name="copy-outline"></ion-icon>
-                    <span class="copy-text">Copy</span>
-                </button>
-                <div class="gc-options">
-                    <div class="gc-26-1" style="border: 10px;">-XX:+UseShenandoahGC -XX:ShenandoahGCMode=generational
-                        -XX:+UseCompactObjectHeaders</div>
+                <div style="display: flex; flex-direction: column;">
+                    <div>
+                        <button type="button" class="copy" data-copy=".gc-26-1-sh">
+                            <ion-icon name="copy-outline" style="width: 1rem"></ion-icon>
+                            <span class="copy-text">Copy</span>
+                        </button>
+                        <div class="gc-options">
+                            <div class="gc-26-1-sh" style="border: 10px;">-XX:+UseShenandoahGC
+                                -XX:ShenandoahGCMode=generational
+                                -XX:+UseCompactObjectHeaders</div>
+                        </div>
+                    </div>
+                    <div>
+                        <button type="button" class="copy" data-copy=".gc-26-1-zgc">
+                            <ion-icon name="copy-outline" style="width: 1rem"></ion-icon>
+                            <span class="copy-text">Copy</span>
+                        </button>
+                        <div class="gc-options">
+                            <div class="gc-26-1-zgc" style="border: 10px;">-XX:+UseZGC -XX:+UseCompactObjectHeaders
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </article>
-            <br>
             <hr>
             <article id="1-21-1">
                 <div class="version">
@@ -60,7 +73,93 @@
                 </div>
                 <p>Default Java Version: Java 21</p>
                 <p>Recommended Java Version: Java 25</p>
+                <br>
+                <p>If using Java 25, refer to the <a href="#26-1" style="color:aquamarine;">26.1</a> section</p>
+                <div style="display: flex; flex-direction: column;">
+                    <div>
+                        <button type="button" class="copy" data-copy=".gc-1-21-1">
+                            <ion-icon name="copy-outline" style="width: 1rem"></ion-icon>
+                            <span class="copy-text">Copy</span>
+                        </button>
+                        <div class="gc-options">
+                            <div class="gc-1-21-1" style="border: 10px;">-XX:+UseZGC -XX:+ZGenerational</div>
+                        </div>
+                    </div>
+                </div>
             </article>
+            <hr>
+            <article id="1-20-1">
+                <div class="version">
+                    <h1>Minecraft Version 1.20.1</h1>
+                </div>
+                <p>Default Java Version: Java 17</p>
+                <p>Recommended Java Version: Java 25*</p>
+                <br>
+                <p>*To run Java 25, you may need to update your version of Forge<br>
+                    If using Java 25, refer to the <a href="#26-1" style="color:aquamarine;">26.1</a> section</p>
+                <div style="display: flex; flex-direction: column;">
+                    <div>
+                        <button type="button" class="copy" data-copy=".gc-1-20-1">
+                            <ion-icon name="copy-outline" style="width: 1rem"></ion-icon>
+                            <span class="copy-text">Copy</span>
+                        </button>
+                        <div class="gc-options">
+                            <div class="gc-1-20-1" style="border: 10px;">-XX:+UseZGC -XX:+ZGenerational</div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <hr>
+            <article id="1-12-2">
+                <div class="version">
+                    <h1>Minecraft Version 1.12.2</h1>
+                </div>
+                <p>Default Java Version: Java 8</p>
+                <p>Recommended Java Version: Java 25*</p>
+                <br>
+                <p>*To run Java 25, you will need to use something like LWJGL3ify, or Cleanroom Loader, potentially unstable<br>
+                If using Java 25, refer to the <a href="#26-1" style="color:aquamarine;">26.1</a> section</p>
+                <br>
+                <p>There really is no circumstance in which you should be running Java 8 for minecraft, and if there is, you probably<br>
+                don't need to bother about optimising; It won't do much for you.</p>
+                <div style="display: flex; flex-direction: column;">
+                    <div>
+                        <button type="button" class="copy" data-copy=".gc-1-12-2" disabled>
+                            <ion-icon name="copy-outline" style="width: 1rem"></ion-icon>
+                            <span class="copy-text">Uh oh!</span>
+                        </button>
+                        <div class="gc-options">
+                            <div class="gc-1-12-2" style="border: 10px;">N/A</div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <hr>
+            <article id="1-7-10">
+                <div class="version">
+                    <h1>Minecraft Version 1.7.10</h1>
+                </div>
+                <p>Default Java Version: Java 8</p>
+                <p>Recommended Java Version: Java 25*</p>
+                <br>
+                <p>*To run Java 25, you will need to use LWJGL3ify<br>
+                If using Java 25, refer to the <a href="#26-1" style="color:aquamarine;">26.1</a> section</p>
+                <br>
+                <p>There really is no circumstance in which you should be running Java 8 for minecraft, and if there is, you probably<br>
+                don't need to bother about optimising; It won't do much for you.</p>
+                <div style="display: flex; flex-direction: column;">
+                    <div>
+                        <button type="button" class="copy" data-copy=".gc-1-7-10" disabled>
+                            <ion-icon name="copy-outline" style="width: 1rem"></ion-icon>
+                            <span class="copy-text">Uh oh!</span>
+                        </button>
+                        <div class="gc-options">
+                            <div class="gc-1-7-10" style="border: 10px;">N/A</div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <hr>
         </section>
 
     </main>
