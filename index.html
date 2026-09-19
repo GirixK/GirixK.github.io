@@ -2,17 +2,38 @@
 <html lang="en">
 <head>
   <title>Giri's Website</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/navigation.css">
   <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
 </head>
 <body>
-<p>Temporary until I actually get around to learning how to make a proper website lol
-<hr>
-<p>Java 8: -XX:+UseG1GC<br>
-  <span style="margin-left:24px">G1GC is apparently pretty bad on it's own, in which case those walls of arguments you don't know what they do might actually be better?</span><br>
-  <span style="margin-left:24px">The issue then ends up being that those are optimised for that system, and not your, and it's unlikely you know how to tweak GC settings to fit your system...<br>
+  
+  <header>
+    <h1>I still don't know what I'm doing!</h1>
+    <p>It's also still pretty temporary!</p>
+    <nav>
+      <div class="navbar">
+        <a href="index.html">Home</a>
+  
+        <div class="dropdown">
+          <button class="dropbtn">Useful Info</button>
+          <div class="dropdown-content">
+            <a href="minecraft.html">Minecraft</a>
+            <a href="#">Link 2</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+  <hr>
+  <p>Java 8: -XX:+UseG1GC<br>
+    <span style="margin-left:24px">G1GC is apparently pretty <span style="color:red">bad</span> on it's own, in which case those walls of arguments you don't know what they do might actually be better?</span><br>
+    <span style="margin-left:24px">The issue then ends up being that those are optimised for that system, and not your, and it's unlikely you know how to tweak GC settings to fit your system...<br>
   <span style="margin-left:24px"><s>And even if you did, you'd probably be using a better GC/Java anyway</s><br>
   <span style="margin-left:24px">I'm told some distributions of OpenJDK 8 are shipped with a backport of Shenandoah, if you're using one of those, refer to the Java 17 section</p>
+  
 <hr>
 <p>Java 17: -XX:+UseShenandoahGC</p>
 <hr>
@@ -24,5 +45,6 @@
   <span style="margin-left:24px">Shenandoah might work better, but not all distributions support it, so ZGC is more consistent<br>
 </p>
 <hr>
+</main>
 </body>
 </html>

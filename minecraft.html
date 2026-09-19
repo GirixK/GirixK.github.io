@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Giri's Website</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/navigation.css">
+    <link rel="stylesheet" href="css/copybutton.css">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <script type="module" src="javascript/copytext.js"></script>
+</head>
+<body>
+
+    <header>
+        <h1>Minecraft related information</h1>
+        <nav>
+            <div class="navbar">
+                <a href="index.html">Home</a>
+    
+                <div class="dropdown">
+                    <button class="dropbtn">Useful Info</button>
+                    <div class="dropdown-content">
+                        <a href="minecraft.html">Minecraft</a>
+                        <a href="#">Link 2</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <main>
+
+        <section id="java-versions">
+            <hr>
+            <article id="26.1">
+                <div class="version">
+                    <h1>Minecraft Version 26.1</h1>
+                </div>
+                <p>Default Java Version: Java 25</p>
+                <p>Recommended Java Version: Java 25</p>
+                <br>
+                <p>I haven't seen any benchmarks that really compare the following two GCs, theory states Shenandoah might be better,<br>
+                    but also I really recommend you try both of these setups out, and see which runs better for you</p>
+                <div class="gc-options">
+                    <div class="gc-26.1">
+                        <p>-XX:+UseShenandoahGC -XX:ShenandoahGCMode=generational -XX:+UseCompactObjectHeaders</p>
+                    </div>
+                </div>
+                <button type="button" class="copy" data-copy=".gc-26.1">
+                    <ion-icon name="copy-outline"></ion-icon>
+                    <span class="copy-text">Copy</span>
+                </button>
+            </article>
+            <hr>
+            <article id="1.21.1">
+                <div class="version">
+                    <h1>Minecraft Version 1.21.1</h1>
+                </div>
+                <p>Default Java Version: Java 21</p>
+                <p>Recommended Java Version: Java 25</p>
+            </article>
+        </section>
+
+    </main>
+
+    
+
+    <script type="module" src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
