@@ -11,7 +11,7 @@ document.querySelectorAll(".copy").forEach(copyButton => {
 
             copyButton.disabled = true;
             label.textContent = "Copied";
-            
+
             setTimeout(() => {
                 copyButton.disabled = false;
                 label.textContent = originalText;

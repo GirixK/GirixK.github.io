@@ -26,16 +26,19 @@ section {
 }
 
 .version {
-  font-size: 14px;
+  font-size: 16px;
   color: lightblue;
   text-align: left;
   margin-top: 10px;
 }
 
 .gc-options {
-  font-size: 14px;
+  font-size: 16px;
   background-color: #444444;
   color: lightblue;
   text-align: left;
   margin-top: 10px;
+  padding: 10px;
+  border-radius: 0px 5px 5px 0px;
+  float: left;
 }
